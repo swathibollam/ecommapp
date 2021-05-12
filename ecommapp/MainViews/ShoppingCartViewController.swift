@@ -11,9 +11,10 @@ class ShoppingCartViewController: UIViewController {
 
     // IBOutlets
     @IBOutlet weak var totalPriceLabel: UILabel!
-    @IBOutlet weak var itemsInCartLabel: UILabel!
+//    @IBOutlet weak var itemsInCartLabel: UILabel!
     @IBOutlet weak var cartTableView: UITableView!
-
+    @IBOutlet weak var checkOutButton: UIButton!
+    
     // LifeCycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,8 @@ class ShoppingCartViewController: UIViewController {
             totalPrice += ID_TO_ITEM_MAP[key]!.price! * Double(CART_ITEMS[key]!)
         }
         totalPriceLabel.text = convertToCurrency(totalPrice)
-        itemsInCartLabel.text = String(CART_ITEMS.count)
+//        itemsInCartLabel.text = String(CART_ITEMS.count)
+        checkOutButton.setTitle("Proceed to Checkout (\(CART_ITEMS.count) \(CART_ITEMS.count < 2 ? "item" : "items"))", for: .normal)
     }
 }
 
@@ -68,9 +70,23 @@ extension ShoppingCartViewController: UITableViewDelegate, UITableViewDataSource
 
 extension ShoppingCartViewController: CartItemCellDelegate {
     func removeFromCartTapped(tag: Int) {
+        
+        // Remove item from cart
         CART_ITEMS.removeValue(forKey: String(tag))
+        
+        // Reload data
         cartTableView.reloadData()
         calculateItemsInCartAndTotal()
+        
+        // Show item added feedback
+        let message = UIAlertController(title: "Item Removed", message: "\n" + (ID_TO_ITEM_MAP[String(tag)]?.name)! + " removed from your shopping cart.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .default, handler: { (action) -> Void in
+            print("OK tapped")
+        })
+        
+        message.addAction(ok)
+        
+        self.present(message, animated: true, completion: nil)
     }
     
     

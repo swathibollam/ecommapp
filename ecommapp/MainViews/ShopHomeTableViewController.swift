@@ -40,10 +40,22 @@ extension ShopHomeTableViewController: ItemCellDelegate {
     func addToCartTapped(tag: Int) {
         let addedItem = ITEMS_IN_SHOP[tag] as Item
         
+        // Add item to cart
         if CART_ITEMS[addedItem.id] == nil {
             CART_ITEMS[addedItem.id] = 1
         } else {
             CART_ITEMS[addedItem.id]! += 1;
         }
+        
+        // Show item added feedback
+        let message = UIAlertController(title: "Item added", message: "\n" + addedItem.name + " added to your shopping cart.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .default, handler: { (action) -> Void in
+            print("OK tapped")
+        })
+        
+        message.addAction(ok)
+        
+        self.present(message, animated: true, completion: nil)
+        
     }
 }

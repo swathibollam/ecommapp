@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ubb-Yb-oqS">
-                                <rect key="frame" x="0.0" y="202" width="414" height="571"/>
+                                <rect key="frame" x="0.0" y="163" width="414" height="610"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppingCartCell" rowHeight="150" id="O3C-rO-YWC" customClass="ShoppingCartTableViewCell" customModule="ecommapp" customModuleProvider="target">
@@ -87,7 +87,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7S-E1-Rdo">
-                                <rect key="frame" x="20" y="93" width="374" height="99"/>
+                                <rect key="frame" x="20" y="93" width="374" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Price: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6c-Tq-PZ2">
                                         <rect key="frame" x="8" y="19" width="89" height="21"/>
@@ -99,28 +99,14 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLH-yA-oTE">
                                         <rect key="frame" x="105" y="19" width="126" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Items in Cart: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk5-PV-hLh">
-                                        <rect key="frame" x="8" y="62" width="106" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1V-iL-NaH">
-                                        <rect key="frame" x="122" y="62" width="176" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="99" id="wJd-cJ-9ad"/>
+                                    <constraint firstAttribute="height" constant="60" id="wJd-cJ-9ad"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -142,7 +128,7 @@
                     <navigationItem key="navigationItem" title="Shopping Cart" id="XFc-GI-pRM"/>
                     <connections>
                         <outlet property="cartTableView" destination="Ubb-Yb-oqS" id="Mz7-Y0-02o"/>
-                        <outlet property="itemsInCartLabel" destination="t1V-iL-NaH" id="DOH-wH-K5Z"/>
+                        <outlet property="checkOutButton" destination="dGG-UU-O3A" id="fSe-j0-uMa"/>
                         <outlet property="totalPriceLabel" destination="BLH-yA-oTE" id="kEi-WG-yMF"/>
                     </connections>
                 </viewController>

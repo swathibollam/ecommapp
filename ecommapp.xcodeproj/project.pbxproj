@@ -10,6 +10,7 @@
 		7D3FA8B7264B37E500C6992C /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FA8B6264B37E500C6992C /* ShoppingCartTableViewCell.swift */; };
 		7D3FA8BA264B3A6300C6992C /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FA8B9264B3A6300C6992C /* ShoppingCartViewController.swift */; };
 		7D3FA8BD264C820500C6992C /* PlaceOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FA8BC264C820500C6992C /* PlaceOrderViewController.swift */; };
+		7D3FA8C0264DCCEA00C6992C /* OrderPlacedThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3FA8BF264DCCEA00C6992C /* OrderPlacedThankYouViewController.swift */; };
 		7D64F7082644F379004FFF51 /* ShopHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64F7072644F379004FFF51 /* ShopHomeTableViewController.swift */; };
 		7D64F70D2644FD8D004FFF51 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64F70C2644FD8D004FFF51 /* Item.swift */; };
 		7D64F73526450199004FFF51 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64F73426450199004FFF51 /* Utils.swift */; };
@@ -27,6 +28,7 @@
 		7D3FA8B6264B37E500C6992C /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableViewCell.swift; sourceTree = "<group>"; };
 		7D3FA8B9264B3A6300C6992C /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		7D3FA8BC264C820500C6992C /* PlaceOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderViewController.swift; sourceTree = "<group>"; };
+		7D3FA8BF264DCCEA00C6992C /* OrderPlacedThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPlacedThankYouViewController.swift; sourceTree = "<group>"; };
 		7D64F7072644F379004FFF51 /* ShopHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopHomeTableViewController.swift; sourceTree = "<group>"; };
 		7D64F70C2644FD8D004FFF51 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		7D64F73426450199004FFF51 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				7D64F7072644F379004FFF51 /* ShopHomeTableViewController.swift */,
 				7D3FA8B9264B3A6300C6992C /* ShoppingCartViewController.swift */,
 				7D3FA8BC264C820500C6992C /* PlaceOrderViewController.swift */,
+				7D3FA8BF264DCCEA00C6992C /* OrderPlacedThankYouViewController.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D3FA8B7264B37E500C6992C /* ShoppingCartTableViewCell.swift in Sources */,
+				7D3FA8C0264DCCEA00C6992C /* OrderPlacedThankYouViewController.swift in Sources */,
 				7DD825D326425132008ED703 /* ViewController.swift in Sources */,
 				7DD825CF26425132008ED703 /* AppDelegate.swift in Sources */,
 				7DD825D126425132008ED703 /* SceneDelegate.swift in Sources */,

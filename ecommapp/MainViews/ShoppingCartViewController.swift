@@ -38,8 +38,24 @@ class ShoppingCartViewController: UIViewController {
             totalPrice += ID_TO_ITEM_MAP[key]!.price! * Double(CART_ITEMS[key]!)
         }
         totalPriceLabel.text = convertToCurrency(totalPrice)
-//        itemsInCartLabel.text = String(CART_ITEMS.count)
         checkOutButton.setTitle("Proceed to Checkout (\(CART_ITEMS.count) \(CART_ITEMS.count < 2 ? "item" : "items"))", for: .normal)
+        checkoutButtonStatusUpdate()
+    }
+    
+    private func checkoutButtonStatusUpdate() {
+        
+        checkOutButton.isEnabled = CART_ITEMS.count > 0
+        
+        if checkOutButton.isEnabled {
+            checkOutButton.backgroundColor = UIColor.systemGreen
+        } else {
+            disableCheoutButton()
+        }
+    }
+
+    private func disableCheoutButton() {
+        checkOutButton.isEnabled = false
+        checkOutButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
     }
 }
 

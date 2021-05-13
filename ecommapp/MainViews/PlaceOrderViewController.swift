@@ -32,7 +32,7 @@ class PlaceOrderViewController: UIViewController {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         
-        arrivalEstimateLabel.text = "     " + dateFormatter.string(from: tomorrow!) + ": 4:30pm: Via FedEx"
+        arrivalEstimateLabel.text = "     " + dateFormatter.string(from: tomorrow!) + " - 4:30pm - Via FedEx"
         itemsInCartLabel.text = "Items (" + String(CART_ITEMS.count) + ")"
         var totalPrice: Double = 0
         for key in CART_ITEMS.keys {
